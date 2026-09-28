@@ -4,7 +4,8 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Moja trgovina</title>
-    <link rel="stylesheet" href="http://moja-trgovina.local/wp-content/themes/moja-tema/style.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 <h1>Moja trgovina</h1>
@@ -17,12 +18,13 @@
 </nav>
 <main id="pocetna">
     <h2>Svježe iz prirode</h2>
-    <div class="slideshow" aria-label="Slideshow voća i povrća">
+        <div class="slideshow" aria-label="Slideshow voća i povrća">
         <button class="arrow" type="button" onclick="moveSlide(-1)" aria-label="Prethodna slika">❮</button>
-        <figure class="slide"><img src="https://images.unsplash.com/photo-1635774855717-0aec182f92cc?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Košara puna svježeg sezonskog voća i povrća"><figcaption>Sezonska ponuda</figcaption></figure>
-        <figure class="slide active"><img src="https://images.unsplash.com/photo-1730977876279-be7ceabf082f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Svježe crvene i zelene jabuke"><figcaption>Svježe voće</figcaption></figure>
-        <figure class="slide"><img src="https://images.unsplash.com/photo-1770361516656-4647e4df64f3?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Svježe jagode i borovnice"><figcaption>Bobičasto voće</figcaption></figure>
-        <figure class="slide"><img src="https://images.unsplash.com/photo-1584615467007-0e3e604e9183?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Mrkva i brokula"><figcaption>Domaće povrće</figcaption></figure>
+        <!-- Maknuli smo sliku s košarom jer na prvoj slici slideshow kreće od povrća (mrkve i brokule) -->
+        <figure class="slide active"><img src="https://unsplash.com" alt="Mrkva i brokula"><figcaption>Domaće povrće</figcaption></figure>
+        <figure class="slide"><img src="https://unsplash.com" alt="Svježe crvene i zelene jabuke"><figcaption>Svježe voće</figcaption></figure>
+        <figure class="slide"><img src="https://unsplash.com" alt="Svježe jagode i borovnice"><figcaption>Bobičasto voće</figcaption></figure>
+        <figure class="slide"><img src="https://unsplash.com" alt="Košara puna svježeg sezonskog voća i povrća"><figcaption>Sezonska ponuda</figcaption></figure>
         <button class="arrow" type="button" onclick="moveSlide(1)" aria-label="Sljedeća slika">❯</button>
     </div>
 </main>
