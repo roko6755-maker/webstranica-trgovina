@@ -18,31 +18,27 @@
 </nav>
 <main id="pocetna">
     <h2>Svježe iz prirode</h2>
-            <div class="slideshow" aria-label="Slideshow voća i povrća">
+                <div class="slideshow" aria-label="Slideshow voća i povrća">
         <button class="arrow" type="button" onclick="moveSlide(-1)" aria-label="Prethodna slika">❮</button>
-        <!-- Slika 1: Domaće povrće (mrkva i brokula) -->
+        <!-- Koristimo lokalne slike iz mape images -->
         <figure class="slide active">
-            <img src="https://unsplash.com" alt="Mrkva i brokula">
+            <img src="images/povrce.jpg" alt="Domaće povrće">
             <figcaption>Domaće povrće</figcaption>
         </figure>
-        <!-- Slika 2: Svježe voće (jabuke i kruške) -->
         <figure class="slide">
-            <img src="https://unsplash.com" alt="Svježe crvene i zelene jabuke">
+            <img src="images/jabuke.jpg" alt="Svježe voće">
             <figcaption>Svježe voće</figcaption>
         </figure>
-        <!-- Slika 3: Bobičasto voće (jagode i borovnice) -->
         <figure class="slide">
-            <img src="https://unsplash.com" alt="Svježe jagode i borovnice">
+            <img src="images/jagode.jpg" alt="Bobičasto voće">
             <figcaption>Bobičasto voće</figcaption>
         </figure>
-        <!-- Slika 4: Sezonska ponuda (košara puna svega) -->
         <figure class="slide">
-            <img src="https://unsplash.com" alt="Košara puna svježeg sezonskog voća i povrća">
+            <img src="images/kosara.jpg" alt="Sezonska ponuda">
             <figcaption>Sezonska ponuda</figcaption>
         </figure>
         <button class="arrow" type="button" onclick="moveSlide(1)" aria-label="Sljedeća slika">❯</button>
     </div>
-
 </main>
 <script>
 let currentSlide = 0;
