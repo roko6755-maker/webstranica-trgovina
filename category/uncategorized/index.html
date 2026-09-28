@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head><meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moja trgovina</title>
+    <link rel="stylesheet" href="http://moja-trgovina.local/wp-content/themes/moja-tema/style.css">
+</head>
+<body>
+<h1>Moja trgovina</h1>
+<p>Svježe voće i povrće.</p>
+<nav class="navbar">
+    <a href="#pocetna">Početna</a>
+    <a href="#voce">Voće</a>
+    <a href="#povrce">Povrće</a>
+    <a href="#kosarica">Košarica</a>
+</nav>
+<main id="pocetna">
+    <h2>Svježe iz prirode</h2>
+    <div class="slideshow" aria-label="Slideshow voća i povrća">
+        <button class="arrow" type="button" onclick="moveSlide(-1)" aria-label="Prethodna slika">❮</button>
+        <figure class="slide"><img src="https://images.unsplash.com/photo-1635774855717-0aec182f92cc?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Košara puna svježeg sezonskog voća i povrća"><figcaption>Sezonska ponuda</figcaption></figure>
+        <figure class="slide active"><img src="https://images.unsplash.com/photo-1730977876279-be7ceabf082f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Svježe crvene i zelene jabuke"><figcaption>Svježe voće</figcaption></figure>
+        <figure class="slide"><img src="https://images.unsplash.com/photo-1770361516656-4647e4df64f3?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Svježe jagode i borovnice"><figcaption>Bobičasto voće</figcaption></figure>
+        <figure class="slide"><img src="https://images.unsplash.com/photo-1584615467007-0e3e604e9183?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Mrkva i brokula"><figcaption>Domaće povrće</figcaption></figure>
+        <button class="arrow" type="button" onclick="moveSlide(1)" aria-label="Sljedeća slika">❯</button>
+    </div>
+</main>
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+function showSlide(index) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (index + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+function moveSlide(direction) { showSlide(currentSlide + direction); }
+setInterval(() => showSlide(currentSlide + 1), 4000);
+</script>
+</body>
+</html>

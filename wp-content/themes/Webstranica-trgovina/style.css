@@ -1,0 +1,119 @@
+/*
+Theme Name: Moja Prva Tema
+Version: 1.0
+*/
+
+:root {
+    color-scheme: light;
+    --market-green: #294d39;
+    --market-background: #f7f6ed;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--market-background);
+    color: var(--market-green);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+body > h1 {
+    margin: 0;
+    padding-top: 0;
+    font-size: 40px;
+    line-height: 1.15;
+}
+
+body > p {
+    margin: 27px 0 19px;
+    font-size: 20px;
+}
+
+.navbar {
+    display: flex;
+    min-height: 64px;
+    align-items: center;
+    justify-content: center;
+    gap: 38px;
+    margin: 0 6px;
+    padding: 12px 18px;
+    background: var(--market-green);
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover, .navbar a:focus-visible { text-decoration: underline; }
+
+main h2 {
+    margin: 24px 0 30px;
+    font-size: 30px;
+}
+
+.slideshow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100% - 48px, 1125px);
+    margin: 0 auto;
+}
+
+.slide {
+    display: none;
+    width: min(100% - 100px, 974px);
+    margin: 0;
+}
+
+.slide.active { display: block; }
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: 525px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slide figcaption {
+    padding: 14px 8px;
+    font-size: 22px;
+}
+
+.arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    display: grid;
+    width: 54px;
+    height: 66px;
+    place-items: center;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 50%;
+    background: var(--market-green);
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.arrow:first-child { left: 0; }
+.arrow:last-child { right: 0; }
+.arrow:hover, .arrow:focus-visible { background: #52754c; }
+
+@media (max-width: 700px) {
+    body > h1 { padding-top: 10px; font-size: 34px; }
+    body > p { margin: 18px 0; font-size: 18px; }
+    .navbar { gap: 18px; flex-wrap: wrap; }
+    .navbar a { font-size: 17px; }
+    main h2 { margin: 22px 0; font-size: 26px; }
+    .slideshow { width: calc(100% - 24px); }
+    .slide { width: calc(100% - 56px); }
+    .slide img { height: clamp(260px, 62vw, 420px); }
+    .arrow { width: 42px; height: 52px; font-size: 21px; }
+}
